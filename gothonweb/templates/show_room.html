@@ -1,0 +1,32 @@
+$def with (room,tries,help,save)
+
+<h1> $room.name </h1>
+
+<progress value=$room.ide max="5"></progress>
+<pre>
+$room.description
+</pre>
+
+$if room.name == "death":
+    <p><a href="/">Play again?</a></p>
+$else:
+    <p>
+    <form action="/game" method="POST">
+        - <input type="text" name="action"><input type="SUBMIT">
+    </form>
+    </p>
+$if room.ide ==2:
+    you have $tries tries left
+
+    
+$if help==True:
+    <pre style="float:right;">
+        </br>
+        $room.help
+    </pre> 
+    </br>
+    
+$if (not save):
+    <em style="float:left;">
+        You need to be signed in to save.
+    </em>            

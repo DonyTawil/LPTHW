@@ -1,0 +1,24 @@
+#This code once run shouldn't get any errors but when it would it would have the lines that are preceded by##
+from nose.tools import *
+from bin.app import session
+from bin.app import app
+from tests.tools import assert_response # a special function that studies resp assert_response(response, status ,contains,headers,match)
+from gothonweb.map import code,c #import the cheat codes
+import web
+import base64
+import pickle
+
+store=web.session.DiskStore('docs/sessions')
+a="""KGRwMQpTJ2NvdW50JwpwMgpJOApzUydpcCcKcDMKVjEyNy4wLjAuMQpwNApzUydyb29tJwpwNQpj
+Y29weV9yZWcKX3JlY29uc3RydWN0b3IKcDYKKGNnb3Rob253ZWIubWFwClJvb20KcDcKY19fYnVp
+bHRpbl9fCm9iamVjdApwOApOdFJwOQooZHAxMApTJ3BhdGhzJwpwMTEKKGRwMTIKc1MnaGVscCcK
+cDEzClMnTm9uZXRoaXMgaXMgdGhlIGhlbHAnCnAxNApzUydkZXNjcmlwdGlvbicKcDE1ClMnWW91
+IGp1bXAgaW50byBwb2QgMyBhbmQgaGl0IHRoZSBlamVjdCBidXR0b24uXG5UaGUgcG9kIGVhc2ls
+eSBzbGlkZXMgb3V0IGludG8gc3BhY2UgaGVhZGluZyB0b1xudGhlIHBsYW5ldCBiZWxvdy4gIEFz
+IGl0IGZsaWVzIHRvIHRoZSBwbGFuZXQsIHlvdSBsb29rXG5iYWNrIGFuZCBzZWUgeW91ciBzaGlw
+IGltcGxvZGUgdGhlbiBleHBsb2RlIGxpa2UgYVxuYnJpZ2h0IHN0YXIsIHRha2luZyBvdXQgdGhl
+IEdvdGhvbiBzaGlwIGF0IHRoZSBzYW1lXG50aW1lLiAgWW91IHdvbiFcbicKcDE2CnNTJ3Njb3Jl
+JwpwMTcKSTUKc1MnaWRlJwpwMTgKSTUKc1MnbmFtZScKcDE5ClMnVGhlIEVuZCcKcDIwCnNic1Mn
+c2Vzc2lvbl9pZCcKcDIxClMnOWU5NTEwYTI3NDBhMGVlZmUzZmEwZDRmYzAyNGYyYTM0MTVjMjhi
+YScKcDIyCnNTJ25hbWUnCnAyMwpnMjAKcy4="""
+print(store.decode(a))

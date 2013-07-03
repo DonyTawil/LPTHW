@@ -1,0 +1,14 @@
+$def with (name)
+
+</br>
+</br>
+<h3 style="float-center">Login</h3>
+<form action="signin" method="POST" style="float-center">
+    Name<input type="text" name="name">
+    <input type="SUBMIT">
+</form>    
+
+$if name==False:
+    Invalid username
+$else:
+    $pass        

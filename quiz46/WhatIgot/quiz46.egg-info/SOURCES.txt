@@ -1,0 +1,10 @@
+setup.py
+quiz46.egg-info/PKG-INFO
+quiz46.egg-info/SOURCES.txt
+quiz46.egg-info/dependency_links.txt
+quiz46.egg-info/requires.txt
+quiz46.egg-info/top_level.txt
+skeleton/bin/hey/hey.py
+skeleton/quiz46/__init__.py
+skeleton/tests/__init__.py
+skeleton/tests/quiz46_tests.py
